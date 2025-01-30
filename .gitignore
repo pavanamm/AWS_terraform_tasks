@@ -1,61 +1,27 @@
-# Terraform state files (important to ignore!)
+# Terraform state files (never commit these!)
 *.tfstate
 *.tfstate.*
 
-# .terraform directory (contains downloaded providers and modules)
+# .terraform directory (contains providers and modules)
 .terraform/*
 
-# Crash logs from Terraform
-crash.log
+# Private keys or certificates (NEVER commit these!)
+*.pem  # Or any other private key files
 
-# Temporary files created by Terraform
-*.tfplan
+# Terraform lock file (generally okay to commit, but can be ignored if you're not using a registry that requires it)
+.terraform-lock.hcl
 
-# Sensitive data (NEVER commit these!)
-*.tfvars  # Variable files (can contain secrets)
-*.tfvars.json
-secrets/*
-*.key  # Private keys
-*.pem  # Certificates
-*.pfx  # Keystores
+# Files created by your IDE or other tools (adjust as needed)
+.idea/*      # IntelliJ IDEA (if applicable)
+.vscode/*    # VS Code (if applicable)
+.DS_Store   # macOS Finder (if applicable)
 
-# Local environment files (often machine-specific)
-.env
-*.local
+# Other files you might want to ignore
+*.backup    # Backup files
+*~          # Backup files (often created by editors)
+*.swp       # Swap files (often created by editors)
 
-# Packer build artifacts (if using Packer)
-builds/*
-
-# Files created by your IDE or other tools
-.idea/*      # IntelliJ IDEA
-.vscode/*    # VS Code
-.DS_Store   # macOS Finder
-__pycache__/ # Python cache files
-*.swp       # Swap files (vim, etc.)
-*~          # Backup files
-.cache      # Generic cache directory
-
-# Log files (generally okay to ignore unless specifically needed)
-*.log
-
-# Archive files
-*.zip
-*.tar
-*.gz
-
-# Ignore lock files if you're not using a module registry that requires them
-.terraform-lock.hcl # If you're not using a module registry that requires the lock file, you can ignore it
-
-# If you use Terragrunt, you might want to ignore the .terragrunt-cache directory
-.terragrunt-cache/*
-
-# Ignore files related to your specific cloud provider CLI if applicable
-# For AWS CLI
-.aws/credentials # Be extremely careful with this one!
-.aws/config
-
-# For Azure CLI
-.azure/*
-
-# For GCP CLI
-.config/gcloud/
+# Any other files or directories you don't want to track
+# Example:
+# my-secret-config.txt  # A file containing sensitive info
+# logs/                # A directory containing log files
