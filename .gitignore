@@ -1,1 +1,61 @@
+# Terraform state files (important to ignore!)
+*.tfstate
+*.tfstate.*
+
+# .terraform directory (contains downloaded providers and modules)
 .terraform/*
+
+# Crash logs from Terraform
+crash.log
+
+# Temporary files created by Terraform
+*.tfplan
+
+# Sensitive data (NEVER commit these!)
+*.tfvars  # Variable files (can contain secrets)
+*.tfvars.json
+secrets/*
+*.key  # Private keys
+*.pem  # Certificates
+*.pfx  # Keystores
+
+# Local environment files (often machine-specific)
+.env
+*.local
+
+# Packer build artifacts (if using Packer)
+builds/*
+
+# Files created by your IDE or other tools
+.idea/*      # IntelliJ IDEA
+.vscode/*    # VS Code
+.DS_Store   # macOS Finder
+__pycache__/ # Python cache files
+*.swp       # Swap files (vim, etc.)
+*~          # Backup files
+.cache      # Generic cache directory
+
+# Log files (generally okay to ignore unless specifically needed)
+*.log
+
+# Archive files
+*.zip
+*.tar
+*.gz
+
+# Ignore lock files if you're not using a module registry that requires them
+.terraform-lock.hcl # If you're not using a module registry that requires the lock file, you can ignore it
+
+# If you use Terragrunt, you might want to ignore the .terragrunt-cache directory
+.terragrunt-cache/*
+
+# Ignore files related to your specific cloud provider CLI if applicable
+# For AWS CLI
+.aws/credentials # Be extremely careful with this one!
+.aws/config
+
+# For Azure CLI
+.azure/*
+
+# For GCP CLI
+.config/gcloud/
