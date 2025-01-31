@@ -4,24 +4,29 @@
 
 # .terraform directory (contains providers and modules)
 .terraform/*
+**/.terraform/providers/**
 
 # Private keys or certificates (NEVER commit these!)
-*.pem  # Or any other private key files
+*.pem
+*.key
+*.cert
 
 # Terraform lock file (generally okay to commit, but can be ignored if you're not using a registry that requires it)
 .terraform-lock.hcl
 
 # Files created by your IDE or other tools (adjust as needed)
-.idea/*      # IntelliJ IDEA (if applicable)
-.vscode/*    # VS Code (if applicable)
-.DS_Store   # macOS Finder (if applicable)
+.idea/*
+.vscode/*
+.DS_Store
+Thumbs.db
 
 # Other files you might want to ignore
-*.backup    # Backup files
-*~          # Backup files (often created by editors)
-*.swp       # Swap files (often created by editors)
+*.backup
+*~
+*.swp
+*.log
 
 # Any other files or directories you don't want to track
 # Example:
-# my-secret-config.txt  # A file containing sensitive info
+my-secret-config.txt  # A file containing sensitive info
 # logs/                # A directory containing log files
