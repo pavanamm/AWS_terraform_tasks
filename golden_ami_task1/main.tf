@@ -16,7 +16,7 @@ resource "aws_internet_gateway" "default" {
 # Create a subnet in the default VPC
 resource "aws_subnet" "default_subnet" {
   vpc_id                  = data.aws_vpc.default.id
-  cidr_block              = "172.31.1.0/24"  # Modify the CIDR block as needed
+  cidr_block              = "172.31.32.0/24"  # Modify the CIDR block as needed
   availability_zone       = "us-west-1b"  # Updated availability zone
   map_public_ip_on_launch = true
   tags = {
